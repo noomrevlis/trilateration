@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+<style>
+body{text-align:center;}
+</style>
+</head>
+
+<body>
+
+<div class="btn-group exact-control">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="circlelabel">3 Circles</span> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a class="circle1">1 Circles</a></li>
+      <li><a class="circle2">2 Circles</a></li>
+      <li><a class="circle3">3 Circles</a></li>
+      <li><a class="circle4">4 Circles</a></li>
+      <li><a class="circle5">5 Circles</a></li>
+      <li><a class="circle6">6 Circles</a></li>
+      <li><a class="circle7">7 Circles</a></li>
+      <li><a class="circle8">8 Circles</a></li>
+    </ul>
+  </div>
+  <button disabled="true" type="button" class="btn btn-default layout-grid">
+    Grid
+  </button>
+  <button type="button" class="btn btn-default layout-load">
+    Load
+  </button>
+  <button type="button" class="btn btn-default layout-request">
+    Request
+  </button>
+  <div class="row">
+      <div class="exact col-sm-5"></div>
+      <div class="exact-output col-sm-5" style="margin:16px;fnt-family:Courier;font-size:12px;">
+           <table>
+          <tbody><tr><td>Area: </td><td><span class="area">0</span></td></tr>
+          <tr><td>Polygon Area: </td><td><span class="area-polygon">0</span></td></tr>
+          <tr><td>Arc Area: </td><td><span class="area-arc">0</span></td></tr>
+          </tbody></table>
+      </div>
+  </div>
+</div>
+
+
+<hr style="margin-bottom:5px">
+
+</body>
+
+<script src="./jquery-1.11.2.min.js"></script>
+<script src="./d3/d3.js" charset="utf-8"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./circle-intersection.js"></script>
+<script src="./circle-intersection-vis.js"></script>
+<script>
+createCircleIntersectionVis(d3.select(".exact"),
+                            d3.select(".exact-output"),
+                            d3.select(".exact-control"),
+                            {circleCount:  3,
+                            variant : 'exact'});
+</script>
+
+</html>
