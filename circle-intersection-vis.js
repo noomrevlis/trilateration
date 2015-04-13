@@ -350,8 +350,6 @@ function createCircleIntersectionVis(element,
         d3.json("./test.json", function(error, json) {
           if (error) return console.warn(error);
           data = json;
-          //console.log(data)
-          //console.log(data.p1)
           //console.log(data.p1.radius)
           circles = [];
           circles_read = eval(data.circles)  
